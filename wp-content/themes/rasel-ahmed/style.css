@@ -1,0 +1,584 @@
+/*!
+Theme Name: rasel-ahmed
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: rasel-ahmed
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+rasel-ahmed is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Sanchez:ital@0;1&family=Squada+One&display=swap');
+body{
+    font-family: 'Saira Condensed', sans-serif;
+    color: #fff;
+  
+}
+header#masthead {
+    position: fixed;
+    z-index: 99999;
+}
+header.entry-header{
+    position: fixed;
+}
+.secton-padding{
+    padding: 50px 0;
+}
+.header-area {
+    background: #d7dddd;
+}
+.nav-bar ul {
+    list-style: none;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    padding: 10px 10px 3px 10px;
+}
+
+.nav-bar ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.boxed-btn a {
+    text-decoration: none;
+    margin-top: 29px;
+    font-size: 28px;
+    display: block;
+}
+
+.boxed-btn {
+    text-align: right;
+
+}
+.boxed-btn a{
+    color: #fff;
+}
+.logo {
+    margin-top: 2px;
+}
+.profile-img img {
+    border-radius: 50%;
+}
+.profile-img {
+    text-align: center;
+    margin-top: 30px;
+}
+.hero-area {
+    height: 100vh;
+    color: #fff;
+    background-position: center !important;
+    background-size: cover !important;
+
+}
+
+.hero-area h3 {
+    font-size: 38px;
+}
+
+.header-area {
+    position:fixed;
+    width: 100%;
+    z-index: 77;
+    background:none;
+    transition: all 0.5s ease;
+}
+.header-area.stkiy{
+    background-color: #070707;
+}
+
+.hero-area img {
+    margin-top: 100px;
+}
+.about-me h2 {
+    font-size: 42px;
+    margin-top: 20px;
+}
+
+.about-me {
+    line-height: 1.8;
+    font-size: 18px;
+}
+.social-icon ul {
+    list-style: none;
+}
+.social-icon ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.social-icon ul li a {
+    display: block;
+    font-size: 28px;
+}
+.food-img-1{
+    background: url(assets/img/kassibiranyjpg.jpg);
+   
+
+}
+.logo img {
+    height: 50px;
+}
+
+.food-img-2{background: url(assets/img/Gorur-manso.jpg);}
+.food-img-3{background: url(assets/img/Cheken-vuna.jpg);}
+.food-img-4{background: url(assets/img/Nudols.jpg);}
+
+.food-img-1:hover::after{
+    background:linear-gradient(#1a1e85,#e86242,#ff00e0);
+
+}
+.food-img-2:hover::after{
+    background:linear-gradient(#f75f68,#070529,#ff00e0);
+
+}
+.food-img-3:hover::after{
+    background:linear-gradient(#f75f68,#12322a,#190128);
+
+}
+.food-img-4:hover::after{
+    background:linear-gradient(#07193a,#12322a,#190128);
+
+}
+
+
+
+.food-img-wrap:hover:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    opacity: .8;
+    z-index: -1;
+}
+
+.single-food-area {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.food-img-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    transition: all .5s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-food-area:hover .food-img-wrap {
+    transform: scale(1.2);
+}
+.food-img-wrap h1 {
+    opacity: 0;
+    visibility: hidden;
+}
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    padding-top: 7px;
+    display: block;
+}
+.single-food-area:hover .food-img-wrap h1 {
+    opacity: 1;
+    visibility: visible;
+}
+.section-title span{
+    color: rebeccapurple;
+}
+.boxed-btn.boxed-2 {
+    width: 250px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 50px;
+    display: block;
+    
+}
+.boxed-btn.boxed-2 a {
+    
+    padding: 10px 0;
+    border-radius: 29px;
+}
+.single-songs img{
+    width: 100%;
+    height: 400px;
+    
+}
+.video-play-icon {
+    width: 70px;
+    height: 70px;
+    background: #373737;
+    line-height: 70px;
+    border-radius: 50%;
+    position: absolute !important;
+    top: 50%;
+    left: 50%;
+    margin-left: -35px;
+    margin-top: -35px;
+}
+.boxed-2.video-play-icon a {
+    line-height: 61px;
+}
+
+.single-songs {
+    position: relative;
+    margin-top: 30px;
+}
+.sons-wrap img {
+    border-radius: 10px;
+}
+.boxed-2{
+    position: relative;
+   
+}
+.outer{
+    background:linear-gradient(#14ffe9,#ffeb3d,#ff00e0,#d41f58);
+    height: 70px;
+    width: 220px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.video-play-icon{
+    background:linear-gradient(#f75f68,#ffeb3d,#ff00e0);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+.boxed-2 a,.boxed-2 span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.boxed-2 a{
+    background: #111;
+    color: #f2f2f2;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 9;
+}
+.outer a{
+    padding: 16px 0;
+    width: 210px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+.video-play-icon a{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 50px;
+}
+.boxed-2.outer.text-center {
+    margin-top: 70px;
+}
+.boxed-2 span{
+    width: 100%;
+    height: 100%;
+    background: inherit;
+}
+.boxed-2.outer span{
+    border-radius: 50px;
+}
+.boxed-2.video-play-icon span{
+    border-radius: 50%;
+}
+.boxed-2:hover span:nth-child(1){
+    filter: blur(7px);
+}
+.boxed-2:hover span:nth-child(2){
+    filter: blur(14px);
+}
+.boxed-2:hover{
+    animation: rotate 1.5s linear infinite;
+}
+@keyframes  rotate{
+    0%{
+        filter:hue-rotate(0deg)
+    }
+   100%{
+        filter:hue-rotate(360deg)
+    }
+}
+.nav-bar ul li {
+    position: relative;
+}
+.nav-bar ul li:after {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 100%;
+    height: 3px;
+    background: #FF0B83;
+    content: '';
+    transform: scale(0,1);
+    transition: .6s;
+    transform-origin: 0% 100%;
+}
+.nav-bar ul li:hover::after{
+    transform: scale(.8,1);
+}
+.nav-bar ul li a{
+    color: #fff;
+}
+.boxed-btn{
+    background:linear-gradient(#01bc00,#ba6bef,#ee2d2f,#66e7b6);
+    width: 150px;
+
+}
+.boxed-btn.boxed-2 {
+    width: 150px;
+    margin-top: 16px;
+    position: relative;
+    height: 55px;
+    margin: 0 auto;
+    border-radius: 50px;
+    display: block;
+    margin-top: 21px;
+}
+.boxed-btn.boxed-2 span{
+    border-radius: 50px;
+}
+.boxed-btn.boxed-2 a {
+    position: absolute;
+    top: -80%;
+    left: -43%;
+    transform: translate(50%,50%);
+    padding: 6.5px 28px;
+}
+.social-icon ul li a{
+    color: #fff;
+}
+.social-icon ul li{
+    width: 60px;
+    height: 60px;
+    background-color: #171515;
+    line-height: 60px;
+    border-radius:50% ;
+    box-shadow: 0px 1px 1px 1px #ff00e0;
+    margin: 0 6px;
+    transition: .5s;
+}
+.social-icon ul li:hover{
+    transform: translate(0,-30%);
+}
+.single-blog-box {
+    background: #fff;
+    padding: 9px;
+    color: #373737;
+    height: 500px;
+    transition: .4s;
+   
+}
+.single-blog-box:hover{
+    box-shadow: 1px 0px 10px 3px #ddd;
+}
+.single-blog-box img {
+    height: 221px;
+    width: 400px;
+}
+
+.blog-box-wrap p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+.logout {
+    text-align: right;
+}
+
+.logout a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 10px 3px 10px;
+}
+
+.logout a:hover {
+    color: #01D2B3;
+}
+.social-link ul {
+    list-style: none;
+}
+
+.social-link ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #373737;
+    font-size: 21px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20%;
+    margin: 0 3px;
+}
+
+.social-link ul li a {
+    color: #fff;
+    display: block;
+}
+
+.social-link ul li:hover {
+    background: red;
+}
+.footer-area {
+    padding: 100px 0;
+    background: #070707;
+}
+.social-link ul {
+    padding: 0;
+}
+.footer-area p{
+    color: #ddd;
+}
+.quik-link ul {
+    list-style: none;
+}
+
+.quik-link ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 20px;
+}
+
+.quik-link ul li {
+    margin-bottom: 6px;
+}
+
+.quik-link ul li a:hover {
+    color: #fff;
+}
+.contact-info {
+    position: relative;
+}
+
+.contact-icon {
+    position: absolute;
+}
+
+.contact-info p {
+    margin-left: 34px;
+    color: #ddd;
+}
+.copyright-area {
+    padding: 10px 0;
+}
+.navbar-light .navbar-nav .nav-link {
+    color:#fff;
+}
+.about-me h1 {
+    font-size: 70px;
+    margin-top: 15px;
+}
+
+.about-me a {
+    text-decoration: none;
+    color: #fff;
+}
+.profile-img {
+    position: relative;
+    height: 300px;
+    width: 229px;
+    margin: 0 auto;
+    margin-top: 108px;
+}
+
+.profile-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    background-position: center !important;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+/*Social Icon*/
+.social-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.social-icon ul {
+    position: fixed;
+    right: 40px;
+    text-align: center;
+    top: 30%;
+}
+
+.social-icon ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+.profile-image {
+    width: 450px;
+    height: 450px;
+    background: #333;
+    border-radius: 50%;
+    background-size: cover;
+    border: 10px solid #fff;
+    background-position: center;
+}
+.padding-t{
+    padding-top:120px ;
+}
